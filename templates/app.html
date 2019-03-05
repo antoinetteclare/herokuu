@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-sclae=1.0">
+  <meta http-equiv="X-UA-Compatible" content ="ie-edge">
+
+  <title>My Flask App Page</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+</head>
+
+<body>
+
+  <h1> <span id="header">Hello World!</span> </h1>
+
+  <form method="post" action="/feedback">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+  <label for="email">Email address:</label>
+  <input type="email" id="email" name="email">
+
+
+
+  <input type="submit" value="Send!">
+
+  </form>
+
+
+  <div> I'm flying </div>
+
+
+  {% if name %}
+  <p>Hello {{name}} </p>
+  {% else %}
+  <p>Hello anonymous person </p>
+  {% endif %}
+</body>
+
+</body>
+</html>
